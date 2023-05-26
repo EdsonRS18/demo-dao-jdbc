@@ -2,6 +2,7 @@ package application;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -41,6 +42,14 @@ public class Program {
 		Seller newSeller = new Seller(null, "greg", "greg@gmai.com", new Date(), 4000.00, department);
 		sellerDao.insert(newSeller);
 		System.out.println("inserido, novo id= " + newSeller.getId());
+		
+		System.out.println("\n=== TEST 5: SELLER update===");
+		
+		seller = sellerDao.findById(1);
+		seller.setName("MARTA");
+		sellerDao.update(seller);
+		
+		System.out.println("UPdate complete");
 		
 	}
 }
