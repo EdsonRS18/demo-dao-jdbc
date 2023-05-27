@@ -3,8 +3,6 @@ package application;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
-
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
 import model.entities.Department;
@@ -19,7 +17,7 @@ public class Program {
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		System.out.println("=== TEST 1: SELLER FindByID");
-		Seller seller = sellerDao.findById(3);
+		Seller seller = sellerDao.findById(2);
 
 		System.out.println(seller);
 		
